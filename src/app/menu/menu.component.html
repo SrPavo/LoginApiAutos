@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened class="sidenav">
+      <mat-toolbar color="primary" class="sidenav-toolbar">Menú</mat-toolbar>
+      <mat-nav-list>
+        <mat-list-item>
+          <button mat-button (click)="openUserInfo()">Usuario</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/api-autos">
+          <mat-icon>directions_car</mat-icon>
+          <span>ApiAutos</span>
+        </a>
+        <a mat-list-item routerLink="/usuarios">
+          <mat-icon>people</mat-icon>
+          <span>Usuarios</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Bienvenido, {{ user.name }}</span>
+      </mat-toolbar>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

@@ -1,0 +1,67 @@
+<div class="auto-table-container">
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="marca">
+        <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.marca}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="modelo">
+        <mat-header-cell *matHeaderCellDef> Modelo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.modelo}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="año">
+        <mat-header-cell *matHeaderCellDef> Año </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.año}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="color">
+        <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.color}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="matricula">
+        <mat-header-cell *matHeaderCellDef> Matrícula </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.matricula}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="precio">
+        <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.precio}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="estado">
+        <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.estado}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="descripcion">
+        <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.descripcion}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="imagen">
+        <mat-header-cell *matHeaderCellDef> Imagen </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <img [src]="element.imagen" alt="{{element.marca}} {{element.modelo}}" class="auto-image"> </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="created_at">
+        <mat-header-cell *matHeaderCellDef> Fecha de Creación </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.created_at}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="updated_at">
+        <mat-header-cell *matHeaderCellDef> Fecha de Actualización </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.updated_at}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  

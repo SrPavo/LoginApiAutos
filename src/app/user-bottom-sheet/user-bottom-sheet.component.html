@@ -1,0 +1,15 @@
+<mat-card class="user-card">
+    <mat-card-header>
+      <mat-card-title>{{ data.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="user-profile">
+        <img [src]="data.imageUrl" alt="User Image" class="user-image">
+        <div class="user-info">
+          <p>Email: {{ data.email }}</p>
+          <p>ID: {{ data.id }}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
